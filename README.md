@@ -29,7 +29,7 @@ flowchart LR
 
 ## 🚀 Key Features
 
-- **5-Stage Pipeline:** Separate Fetch (IF), Decode (ID), Execute (EX), Memory (MEM), and Writeback (WB) stages.
+- **5-Stage Pipeline:** Cleanly separated Fetch (IF), Decode (ID), Execute (EX), Memory (MEM), and Writeback (WB) pipeline stages.
 - **Forwarding & Hazard Control:** Implements data forwarding (`fwd_a`, `fwd_b`) to resolve read-after-write (RAW) data hazards and reduce pipeline stalls.
 - **RV32I Instruction Support:** Supports core arithmetic, logical, load/store, and branching instructions.
 - **Automated Verification:** Uses Cocotb and Python to generate test stimuli and verify processor behavior through GHDL simulation.
