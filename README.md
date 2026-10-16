@@ -49,25 +49,31 @@ flowchart LR
 
 ```text
 riscv-processor-soc/
+├── firmware/
+│   └── main.c                 # C source / test program
 ├── rtl/
-│   ├── riscv_soc.vhd              # Top-level SoC wrapper
-│   ├── riscv_core.vhd             # Processor core
-│   ├── alu.vhd                    # 32-bit arithmetic logic unit
-│   ├── register_file.vhd          # 32 x 32-bit register file
-│   ├── control_unit.vhd           # Instruction decoder and control logic
-│   ├── imm_gen.vhd                # Immediate generation unit
-│   ├── pipeline_regs.vhd          # Pipeline registers
-│   ├── mem_wb_reg.vhd             # MEM/WB pipeline register
-│   ├── forwarding_unit.vhd        # Data forwarding logic
-│   ├── hazard_detection_unit.vhd  # Pipeline hazard detection
-│   ├── instruction_memory.vhd     # Instruction memory
-│   └── data_memory.vhd            # Data memory
+│   ├── alu.vhd                # 32-bit Arithmetic Logic Unit
+│   ├── control_unit.vhd       # Instruction decoder and control unit
+│   ├── data_memory.vhd        # Data RAM block
+│   ├── forwarding_unit.vhd    # Pipeline data forwarding logic
+│   ├── hazard_detection_unit.vhd # Pipeline stall logic
+│   ├── imm_gen.vhd            # Immediate generation unit
+│   ├── instruction_memory.vhd # Program ROM block
+│   ├── mem_wb_reg.vhd         # Memory-to-Writeback pipeline register
+│   ├── pipeline_regs.vhd      # Pipeline registers (IF/ID, ID/EX, EX/MEM)
+│   ├── register_file.vhd      # 32 x 32-bit register file
+│   ├── riscv_core.vhd         # Processor core integrating datapath
+│   └── riscv_soc.vhd          # Top-level SoC wrapper
+├── screenshots/
+│   ├── test_execution_log.png # Automated Python verification terminal log
+│   └── simulation_waveform.png # GTKWave internal bus and forwarding trace
 ├── simulation/
-│   ├── test_riscv_soc.py          # Cocotb testbench
-│   └── Makefile                   # Simulation automation
-└── docs/
-    ├── test_execution_log.png     # Automated test execution log
-    └── simulation_waveform.png    # GTKWave simulation waveform
+│   ├── __pycache__/
+│   └── sim_build/
+├── Makefile                   # Automation script for GHDL & Cocotb
+├── test_riscv_soc.py          # Python Cocotb testbench
+├── results.xml                # Cocotb XML test results output
+└── riscv_soc.ghw              # Generated GHDL waveform file
 ```
 ## 📊 Verification & Simulation Results
 
