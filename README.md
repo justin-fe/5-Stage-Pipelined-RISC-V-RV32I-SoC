@@ -26,7 +26,6 @@ flowchart LR
         end
     end
 ```
-
 ## 🚀 Key Features
 
 - **5-Stage Pipeline:** Cleanly separated Fetch (IF), Decode (ID), Execute (EX), Memory (MEM), and Writeback (WB) pipeline stages.
@@ -69,3 +68,42 @@ riscv-processor-soc/
 └── docs/
     ├── test_execution_log.png     # Automated test execution log
     └── simulation_waveform.png    # GTKWave simulation waveform
+'''
+## 📊 Verification & Simulation Results
+
+### 1. Automated Cocotb Test Execution Log
+
+The testbench boots the SoC, tracks program counter execution cycle-by-cycle, and validates data memory transactions with an automated test status log.
+
+### 2. GTKWave Simulation Waveform
+
+The waveform capture below demonstrates sequential instruction fetching (`pc_val`), active ALU calculations, and dynamic forwarding control (`fwd_a`, `fwd_b`) bypassing pipeline data dependencies.
+
+## ⚙️ Getting Started & Running Simulations
+
+### 1. Install Prerequisites (Linux / WSL2)
+
+Install the required simulation tools and Python dependencies:
+
+```bash
+sudo apt update && sudo apt install -y ghdl gtkwave python3 python3-pip
+pip install cocotb
+```
+
+### 2. Execute Simulation
+
+Navigate to the simulation folder and run the Makefile:
+
+```bash
+cd simulation
+make
+```
+
+### 3. Inspect Waveforms
+
+Open the generated simulation waveform in GTKWave:
+
+```bash
+gtkwave riscv_soc.ghw
+```
+
