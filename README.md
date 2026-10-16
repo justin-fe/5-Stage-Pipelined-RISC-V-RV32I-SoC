@@ -25,7 +25,7 @@ flowchart LR
             Hazard -.->|Stall Control| ID
         end
     end
-
+```
 
 ## 🚀 Key Features
 
