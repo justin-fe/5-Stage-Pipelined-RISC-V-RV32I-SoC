@@ -68,7 +68,7 @@ riscv-processor-soc/
 └── docs/
     ├── test_execution_log.png     # Automated test execution log
     └── simulation_waveform.png    # GTKWave simulation waveform
-'''
+
 ## 📊 Verification & Simulation Results
 
 ### 1. Automated Cocotb Test Execution Log
