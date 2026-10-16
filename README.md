@@ -26,6 +26,7 @@ flowchart LR
         end
     end
 
+
 ## 🚀 Key Features
 
 - **5-Stage Pipeline:** Separate Fetch (IF), Decode (ID), Execute (EX), Memory (MEM), and Writeback (WB) stages.
