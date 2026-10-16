@@ -83,9 +83,14 @@ riscv-processor-soc/
 
 The testbench boots the SoC, tracks program counter execution cycle-by-cycle, and validates data memory transactions with an automated test status log.
 
+ADD PHOTO
+
 ### 2. GTKWave Simulation Waveform
 
 The waveform capture below demonstrates sequential instruction fetching (`pc_val`), active ALU calculations, and dynamic forwarding control (`fwd_a`, `fwd_b`) bypassing pipeline data dependencies.
+
+ADD PHOTO
+
 
 ## ⚙️ Getting Started & Running Simulations
 
