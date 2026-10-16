@@ -39,7 +39,7 @@ flowchart LR
 
 | Component | Technology |
 |---|---|
-| Hardware Description Language | VHDL |
+| Hardware Description Language | VHDL (IEEE 'std_logic_1164','numeric_std') |
 | Simulation Engine | GHDL v5.0.1 |
 | Verification Framework | Cocotb |
 | Programming Language | Python |
