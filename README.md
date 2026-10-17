@@ -84,8 +84,7 @@ ADD PHOTO
 
 The waveform capture below demonstrates sequential instruction fetching (`pc_val`), active ALU calculations, and dynamic forwarding control (`fwd_a`, `fwd_b`) bypassing pipeline data dependencies.
 
-ADD PHOTO
-
+![Test Execution Log](screenshots/simulation_waveform.png )
 
 ## ⚙️ Getting Started & Running Simulations
 
