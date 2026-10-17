@@ -68,14 +68,9 @@ riscv-processor-soc/
 │   ├── test_execution_log.png # Automated Python verification terminal log
 │   └── simulation_waveform.png # GTKWave internal bus and forwarding trace
 ├── simulation/
-│   ├── __pycache__/
-│   │     └── test_riscv_soc.cpython-314-pytest-9.1.1.pyc
-│   ├── sim_build/
-│   │     └──work-obj93.cf
 │   ├── Makefile                   # Automation script for GHDL & Cocotb
 │   ├── test_riscv_soc.py          # Python Cocotb testbench
-│   ├── results.xml                # Cocotb XML test results output
-│   └── riscv_soc.ghw              # Generated GHDL waveform file
+│   └── results.xml                # Cocotb XML test results output
 ```
 ## 📊 Verification & Simulation Results
 
