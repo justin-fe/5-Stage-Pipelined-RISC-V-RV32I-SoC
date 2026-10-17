@@ -78,7 +78,7 @@ riscv-processor-soc/
 
 The testbench boots the SoC, tracks program counter execution cycle-by-cycle, and validates data memory transactions with an automated test status log.
 
-ADD PHOTO
+![Test Execution Log](screenshots/test_execution_log.png  )
 
 ### 2. GTKWave Simulation Waveform
 
